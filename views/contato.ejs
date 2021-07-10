@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <%- include('reultilizando/head.ejs'); %>
+        <%- include('reultilizando/cookies.ejs'); %>
+</head>
+
+<body class="container">
+    <header>
+        <%- include('reultilizando/header.ejs'); %>
+    </header>
+
+    <body>
+
+        <div id="corpo">
+            <div class="container">
+                <div class="card">
+                    <div class=" card-header">
+                        <h3>Formulário de contato:</h3>
+                    </div>
+
+                    <div class="card-body">
+                        <form action="/enviofc" class="form-contact" method="post" tabindex="1" id="fmc">
+                            <input type="text" class="form-contact-input" name="nome" id='nome' placeholder="Nome" required />
+                            <input type="email" class="form-contact-input" name="email" placeholder="Email" id="email" required />
+                            <input type="tel" class="form-contact-input" name="tel" placeholder="Telefone" />
+                            <textarea class="form-contact-textarea" name="conteudo" placeholder="Deixe uma mensagem" id='texto' required></textarea>
+                            <button type="submit" class="form-contact-button" id="button">Enviar</button>
+                            <div class="alert alert-danger d-none" id="campo">
+                                O campo <span id="nome_do_campo"></span> Não foi preenchido corretamente!
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+    <footer>
+        <%- include('reultilizando/footer.ejs'); %>
+    </footer>
+
+</html>
